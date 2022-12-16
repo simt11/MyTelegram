@@ -3,11 +3,12 @@ package com.example.vovatelegram
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import com.example.vovatelegram.databinding.ActivityMainBinding
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.Drawer
 import androidx.appcompat.widget.Toolbar
+import com.example.mytelegram.ui.ChatsFragment
+import com.example.mytelegram.ui.SettingsFragment
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.DividerDrawerItem
@@ -31,6 +32,13 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         initFields()
         initFunc()
+    }
+
+    private fun initFunc() {
+        setSupportActionBar(toolbar)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.dataContainer, ChatsFragment()).commit()
+        createHeader()
         createDrawer()
     }
 
@@ -89,23 +97,21 @@ class MainActivity : AppCompatActivity() {
                     .withName("Вопросы о Telegram")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_help)
-            ).withOnDrawerItemClickListener(object :Drawer.OnDrawerItemClickListener {
+            ).withOnDrawerItemClickListener(object : Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(
                     view: View?,
                     position: Int,
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
-                    Toast.makeText( applicationContext, position.toString(), Toast.LENGTH_SHORT).show()
+                    when (position) {
+                        7 -> supportFragmentManager.beginTransaction()
+                            .addToBackStack(null)
+                            .replace(R.id.dataContainer, SettingsFragment()).commit()
+                    }
                     return false
                 }
 
             }).build()
-    }
-
-    private fun initFunc() {
-        setSupportActionBar(toolbar)
-        createHeader()
-
     }
 
     private fun createHeader() {
