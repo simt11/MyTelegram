@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         initFields()
-        initFunc()
+        initFuncMaterial()
     }
 
-    private fun initFunc() {
+    private fun initFuncMaterial() {
         setSupportActionBar(toolbar)
         appDrawer.create()
         supportFragmentManager.beginTransaction()

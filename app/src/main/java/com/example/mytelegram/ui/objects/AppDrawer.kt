@@ -14,6 +14,15 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 
+private const val id_create_groups: Long     = 1
+private const val id_secret_chat: Long       = 2
+private const val id_create_channel: Long    = 3
+private const val id_contacts: Long          = 4
+private const val id_phone: Long             = 5
+private const val id_favorites: Long         = 6
+private const val id_settings: Long          = 7
+private const val id_invite: Long            = 8
+private const val id_help: Long              = 9
 class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: Toolbar) {
     private lateinit var drawer: Drawer
     private lateinit var header: AccountHeader
@@ -31,50 +40,50 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: Toolbar) {
             .withSelectedItem(-1)
             .withAccountHeader(header)
             .addDrawerItems(
-                PrimaryDrawerItem().withIdentifier(100)
+                PrimaryDrawerItem().withIdentifier(id_create_groups)
                     .withIconTintingEnabled(true)
-                    .withName("Создать группу")
+                    .withName(R.string.create_groups)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_create_groups),
-                PrimaryDrawerItem().withIdentifier(101)
+                PrimaryDrawerItem().withIdentifier(id_secret_chat)
                     .withIconTintingEnabled(true)
-                    .withName("Создать секретный чат")
+                    .withName(R.string.secret_chat)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_secret_chat),
-                PrimaryDrawerItem().withIdentifier(102)
+                PrimaryDrawerItem().withIdentifier(id_create_channel)
                     .withIconTintingEnabled(true)
-                    .withName("Создать канал")
+                    .withName(R.string.create_channel)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_create_channel),
-                PrimaryDrawerItem().withIdentifier(103)
+                PrimaryDrawerItem().withIdentifier(id_contacts)
                     .withIconTintingEnabled(true)
-                    .withName("Контакты")
+                    .withName(R.string.contacts)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_contacts),
-                PrimaryDrawerItem().withIdentifier(104)
+                PrimaryDrawerItem().withIdentifier(id_phone)
                     .withIconTintingEnabled(true)
-                    .withName("Звонки")
+                    .withName(R.string.phone)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_phone),
-                PrimaryDrawerItem().withIdentifier(105)
+                PrimaryDrawerItem().withIdentifier(id_favorites)
                     .withIconTintingEnabled(true)
-                    .withName("Избранное")
+                    .withName(R.string.favorites)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_favorites),
-                PrimaryDrawerItem().withIdentifier(106)
+                PrimaryDrawerItem().withIdentifier(id_settings)
                     .withIconTintingEnabled(true)
-                    .withName("Настройки")
+                    .withName(R.string.settings)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_settings),
                 DividerDrawerItem(),
-                PrimaryDrawerItem().withIdentifier(107)
+                PrimaryDrawerItem().withIdentifier(id_invite)
                     .withIconTintingEnabled(true)
-                    .withName("Пригласить друзей")
+                    .withName(R.string.invite)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_invate),
-                PrimaryDrawerItem().withIdentifier(108)
+                PrimaryDrawerItem().withIdentifier(id_help)
                     .withIconTintingEnabled(true)
-                    .withName("Вопросы о Telegram")
+                    .withName(R.string.help)
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_help)
             ).withOnDrawerItemClickListener(object : Drawer.OnDrawerItemClickListener {
@@ -84,7 +93,7 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: Toolbar) {
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
                     when (position) {
-                        7 -> mainActivity.supportFragmentManager.beginTransaction()
+                        id_settings.toInt() -> mainActivity.supportFragmentManager.beginTransaction()
                             .addToBackStack(null)
                             .replace(R.id.dataContainer, SettingsFragment()).commit()
                     }
@@ -99,8 +108,8 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: Toolbar) {
             .withActivity(mainActivity)
             .withHeaderBackground(R.drawable.header)
             .addProfiles(
-                ProfileDrawerItem().withName("Vova B")
-                    .withEmail("+79225623475")
+                ProfileDrawerItem().withName(R.string.user_name)
+                    .withEmail(R.string.user_mail)
             ).build()
     }
 }
