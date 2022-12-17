@@ -108,7 +108,7 @@ class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: Toolbar) {
             .withActivity(mainActivity)
             .withHeaderBackground(R.drawable.header)
             .addProfiles(
-                ProfileDrawerItem().withName(R.string.user_name)
+                ProfileDrawerItem().withName(R.string.default_user_name)
                     .withEmail(R.string.user_mail)
             ).build()
     }

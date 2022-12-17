@@ -1,15 +1,146 @@
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mytelegram.ui.fragments.SettingsFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/settings" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_header_block"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/default_user_photo"
+            android:layout_width="@dimen/settings_user_photo_width"
+            android:layout_height="@dimen/settings_user_photo_height"
+            android:layout_marginStart="@dimen/settings_user_photo_margin_start"
+            android:src="@drawable/default_photo"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/settings_user_photo_border_width"
+            app:civ_circle_background_color="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:text="@string/default_user_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextH2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/default_user_photo"
+            app:layout_constraintTop_toTopOf="@+id/default_user_photo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:text="@string/status_default_user"
+            android:textColor="@color/white2"
+            android:textSize="@dimen/smallText"
+            app:layout_constraintStart_toEndOf="@+id/default_user_photo"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="TextContrastCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/settings_text_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/vertical_margin"
+        android:text="@string/Settings_account"
+        android:textColor="@color/colorTextBlue"
+        android:textSize="@dimen/TextH2"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/settings_header_block"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setting_button_phone"
+        style="@style/settings_button"
+        app:layout_constraintTop_toBottomOf="@+id/settings_text_account"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/settings_text_phone"
+            style="@style/settings_button_text"
+            android:text="@string/setting_user_phone"
+            app:layout_constraintTop_toTopOf="@id/setting_button_phone"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <TextView
+            android:id="@+id/settings_text_phone_hint"
+            style="@style/settings_button_hint"
+            android:text="@string/setting_phone_hint"
+            app:layout_constraintTop_toBottomOf="@id/settings_text_phone"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            style="@style/button_divider"
+            app:layout_constraintTop_toBottomOf="@id/settings_text_phone_hint" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setting_button_login"
+        style="@style/settings_button"
+        app:layout_constraintTop_toBottomOf="@+id/setting_button_phone"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/settings_text_login"
+            style="@style/settings_button_text"
+            android:text="@string/setting_user_login"
+            app:layout_constraintTop_toTopOf="@id/setting_button_login"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <TextView
+            android:id="@+id/settings_text_login_hint"
+            style="@style/settings_button_hint"
+            android:text="@string/setting_login_hint"
+            app:layout_constraintTop_toBottomOf="@id/settings_text_login"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            style="@style/button_divider"
+            app:layout_constraintTop_toBottomOf="@id/settings_text_login_hint" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setting_button_about"
+        style="@style/settings_button"
+        app:layout_constraintTop_toBottomOf="@+id/setting_button_login"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp">
+
+        <TextView
+            android:id="@+id/settings_text_about"
+            style="@style/settings_button_text"
+            android:text="@string/setting_user_about"
+            app:layout_constraintTop_toTopOf="@id/setting_button_about"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <TextView
+            android:id="@+id/settings_text_about_hint"
+            style="@style/settings_button_hint"
+            android:text="@string/setting_user_about_hint"
+            app:layout_constraintTop_toBottomOf="@id/settings_text_about"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            style="@style/button_divider"
+            app:layout_constraintTop_toBottomOf="@id/settings_text_about_hint" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

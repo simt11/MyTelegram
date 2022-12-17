@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="TextH1">14sp</dimen>
+    <dimen name="TextH2">13sp</dimen>
+    <dimen name="TextH3">11sp</dimen>
+    <dimen name="settings_user_status_margin_start">16dp</dimen>
+    <dimen name="smallText">14sp</dimen>
+    <dimen name="vertical_margin">10dp</dimen>
+    <dimen name="vertical_margin_small">5dp</dimen>
+    <!--Settings fragment-->
+    <dimen name="settings_user_photo_width">55dp</dimen>
+    <dimen name="settings_user_photo_height">55dp</dimen>
+    <dimen name="settings_user_photo_border_width">2dp</dimen>
+    <dimen name="settings_user_photo_margin_start">20dp</dimen>
+</resources>

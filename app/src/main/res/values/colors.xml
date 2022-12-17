@@ -8,9 +8,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white2">#E6E2E2</color>
-    <color name="colorPrimary">#0088cc</color>
-    <color name="colorPrimaryVariant">#007ACC</color>
+    <color name="colorPrimary">#5a8fbb</color>
+    <color name="colorPrimaryVariant">#517DA2</color>
     <color name="colorOnPrimary">@color/white</color>
+    <color name="colorGray">#82858A</color>
+    <color name="colorTextBlack">#222222</color>
+    <color name="colorTextBlue">#3995D4</color>
+    <color name="colorDivider">#ECECEC</color>
+
+
 
 
     <!-- OVERWRITE THESE COLORS FOR A LIGHT THEME -->

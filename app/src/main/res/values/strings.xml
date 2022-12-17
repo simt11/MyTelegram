@@ -12,7 +12,15 @@
     <string name="settings">Настройки</string>
     <string name="invite">Пригласить друзей</string>
     <string name="help">Вопросы о Telegram</string>
-    <string name="user_name">Вова Б</string>
+    <string name="default_user_name">Вова Б</string>
     <string name="user_mail">+79225623475</string>
     <string name="chat">Чаты</string>
+    <string name="status_default_user">в сети</string>
+    <string name="Settings_account">Аккаунт</string>
+    <string name="setting_user_phone">+7 (926) 347–71–80</string>
+    <string name="setting_phone_hint">Нажмите, чтобы изменить номер телефона</string>
+    <string name="setting_user_login">\@login</string>
+    <string name="setting_login_hint">Имя пользователя</string>
+    <string name="setting_user_about" />
+    <string name="setting_user_about_hint">Напишите немного о себе</string>
 </resources>
