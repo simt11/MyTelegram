@@ -12,6 +12,7 @@
     <color name="colorPrimaryVariant">#517DA2</color>
     <color name="colorOnPrimary">@color/white</color>
     <color name="colorGray">#82858A</color>
+    <color name="colorGrayLight">#CECFCF</color>
     <color name="colorTextBlack">#222222</color>
     <color name="colorTextBlue">#3995D4</color>
     <color name="colorDivider">#ECECEC</color>
