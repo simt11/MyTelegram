@@ -45,4 +45,14 @@
         <item name="background">@color/white</item>
         <item name="actionMenuTextColor">@color/black</item>
     </style>
+
+    <style name="style_large_heading_blue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/vertical_margin</item>
+        <item name="android:textColor">@color/colorTextBlue</item>
+        <item name="android:textSize">@dimen/TextH2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
