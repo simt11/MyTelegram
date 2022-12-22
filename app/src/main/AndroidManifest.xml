@@ -14,9 +14,8 @@
         android:theme="@style/Theme.MyTelegram"
         tools:targetApi="31">
         <activity
-            android:exported="false"
-            android:name=".activities.RegisterActivity"
-                >
+            android:exported="true"
+            android:name=".RegisterActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
