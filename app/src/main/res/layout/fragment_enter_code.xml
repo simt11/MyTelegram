@@ -38,6 +38,7 @@
         android:id="@+id/register_input_code"
         android:autofillHints=""
         android:hint="@string/register_code_hint"
+        android:textColorHint="@color/colorTextBlack"
         android:maxLength="6"
         app:layout_constraintTop_toBottomOf="@+id/text_enter_code_2"
         style="@style/fragment_text"

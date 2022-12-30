@@ -7,6 +7,7 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:background">@drawable/ripple_effect</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 
     <style name="settings_button_text">

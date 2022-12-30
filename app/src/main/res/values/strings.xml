@@ -26,10 +26,11 @@
     <string name="settings_TopMenu_change_name">Изменить имя</string>
     <string name="settings_menu_logout">Выход</string>
     <string name="settings_menu_photo">Выбрать фотографию или видео</string>
-    <string name="register_enter_phone_number">Номер телефона</string>
+    <string name="register_enter_phone_number">--- --- ----</string>
     <string name="register_totle_your_phone">Ваш телефон</string>
     <string name="register_text_enter_cod">Введите код</string>
     <string name="register_text_enter_cod2">Мы отправили SMS с кодом проверки на ваш телефон</string>
     <string name="register_code_hint">------</string>
     <string name="register_toast_enter_phone">Введите номер телефона</string>
+    <string name="register_text_enter_phone">Введите номер телефона</string>
 </resources>
