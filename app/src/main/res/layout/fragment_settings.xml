@@ -28,7 +28,7 @@
             tools:ignore="MissingClass,MissingConstraints" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/settings_full_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_margin"
@@ -50,7 +50,7 @@
             android:textColor="@color/white2"
             android:textSize="@dimen/smallText"
             app:layout_constraintStart_toEndOf="@+id/default_user_photo"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/settings_full_name"
             tools:ignore="TextContrastCheck" />
 
 
@@ -98,22 +98,22 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/settings_text_login"
+            android:id="@+id/settings_change_username"
             android:text="@string/setting_user_login"
             app:layout_constraintTop_toTopOf="@id/setting_button_login"
             style="@style/settings_button_text"
             tools:ignore="MissingConstraints,NotSibling" />
 
         <TextView
-            android:id="@+id/settings_text_login_hint"
+            android:id="@+id/settings_change_username_hint"
             android:text="@string/setting_login_hint"
-            app:layout_constraintTop_toBottomOf="@id/settings_text_login"
+            app:layout_constraintTop_toBottomOf="@id/settings_change_username"
             style="@style/settings_button_hint"
             tools:ignore="MissingConstraints,TextContrastCheck"
             tools:layout_editor_absoluteX="16dp" />
 
         <View
-            app:layout_constraintTop_toBottomOf="@id/settings_text_login_hint"
+            app:layout_constraintTop_toBottomOf="@id/settings_change_username_hint"
             style="@style/button_divider" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
