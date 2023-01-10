@@ -33,8 +33,10 @@ android {
     viewBinding {
         enabled = true
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
-
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.9.0'
@@ -57,10 +59,10 @@ dependencies {
 // Add for NavController support
     implementation "com.mikepenz:materialdrawer-nav:7.0.0"
 
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
 
-    def lifecycle_version = "2.4.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 // Add for Android-Iconics support
     //implementation "com.mikepenz:materialdrawer-iconics:7.0.0"
