@@ -10,6 +10,7 @@ import com.example.vovatelegram.R
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_phone_number.register_btn_next
 import kotlinx.android.synthetic.main.fragment_enter_phone_number.register_input_phone_number
@@ -22,6 +23,7 @@ class EnterPhoneNumberFragment : BaseFragment(R.layout.fragment_enter_phone_numb
 
     override fun onStart() {
         super.onStart()
+        AUTH = FirebaseAuth.getInstance()
         callback = object: PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
                 AUTH.signInWithCredential(credential).addOnCompleteListener{task ->
@@ -56,12 +58,14 @@ class EnterPhoneNumberFragment : BaseFragment(R.layout.fragment_enter_phone_numb
 
     private fun authUser() {
         phoneNumber = register_input_phone_number.text.toString()
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            phoneNumber,
-            60,
-            TimeUnit.SECONDS,
-            activity as RegisterActivity,
-            callback
+        PhoneAuthProvider.verifyPhoneNumber(
+            PhoneAuthOptions
+                .newBuilder(FirebaseAuth.getInstance())
+                .setActivity(activity as RegisterActivity)
+                .setPhoneNumber(phoneNumber)
+                .setTimeout(60L, TimeUnit.SECONDS)
+                .setCallbacks(callback)
+                .build()
         )
     }
 }
