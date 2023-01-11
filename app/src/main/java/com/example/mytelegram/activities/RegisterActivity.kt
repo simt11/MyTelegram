@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import com.example.mytelegram.ui.fragments.EnterPhoneNumberFragment
+import com.example.mytelegram.utilits.initFirebase
 import com.example.mytelegram.utilits.replaceFragment
 import com.example.vovatelegram.R
 import com.example.vovatelegram.databinding.ActivityRegisterBinding
@@ -19,6 +20,7 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        initFirebase()
         toolbar = binding.registerToolbar
         setSupportActionBar(toolbar)
         title = getString(R.string.register_totle_your_phone)
