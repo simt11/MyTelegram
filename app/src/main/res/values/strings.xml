@@ -23,4 +23,7 @@
     <string name="setting_login_hint">Имя пользователя</string>
     <string name="setting_user_about" />
     <string name="setting_user_about_hint">Напишите немного о себе</string>
+    <string name="settings_TopMenu_change_name">Изменить имя</string>
+    <string name="settings_menu_logout">Выход</string>
+    <string name="settings_menu_photo">Выбрать фотографию или видео</string>
 </resources>
