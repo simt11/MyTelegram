@@ -16,7 +16,3 @@ fun initFirebase(){
     AUTH = FirebaseAuth.getInstance()
     REF_DATABASE_ROOT = FirebaseDatabase.getInstance().reference
 }
-
-private fun initFullnameList(){
-    val fullnamelist = NODE_USERS
-}

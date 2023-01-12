@@ -38,15 +38,11 @@ class EnterCodeFragment(val phoneNumber: String, val id: String) :
         AUTH.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 val uid = AUTH.currentUser?.uid.toString()
-                var dateMap = mutableMapOf<String, Any>()
-/*                (
+                val dateMap = mutableMapOf<String, Any>(
                     CHILD_ID to uid,
                     CHILD_PHONE to phoneNumber,
                     CHILD_USERNAME to uid
-                )*/
-                dateMap[CHILD_ID] = uid
-                dateMap[CHILD_PHONE] = phoneNumber
-                dateMap[CHILD_USERNAME] = uid
+                )
                 REF_DATABASE_ROOT.child(NODE_USERS)
                     .child(uid)
                     .updateChildren(dateMap)
