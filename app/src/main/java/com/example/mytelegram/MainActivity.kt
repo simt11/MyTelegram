@@ -1,9 +1,11 @@
 package com.example.vovatelegram
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.vovatelegram.databinding.ActivityMainBinding
 import androidx.appcompat.widget.Toolbar
+import com.example.mytelegram.activities.RegisterActivity
 import com.example.mytelegram.ui.fragments.ChatsFragment
 import com.example.mytelegram.ui.objects.AppDrawer
 
@@ -25,10 +27,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFuncMaterial() {
-        setSupportActionBar(toolbar)
-        appDrawer.create()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.dataContainer, ChatsFragment()).commit()
+        if (false) {
+            setSupportActionBar(toolbar)
+            appDrawer.create()
+            supportFragmentManager.beginTransaction()
+                .replace(
+                    R.id.dataContainer,
+                    ChatsFragment()
+                ).commit()
+        } else {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initFields() {
