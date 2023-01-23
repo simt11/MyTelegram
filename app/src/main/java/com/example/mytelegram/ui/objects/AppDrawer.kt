@@ -3,6 +3,9 @@ package com.example.mytelegram.ui.objects
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.drawerlayout.widget.DrawerLayout.LOCK_MODE_LOCKED_CLOSED
+import androidx.drawerlayout.widget.DrawerLayout.LOCK_MODE_UNLOCKED
 import com.example.mytelegram.ui.fragments.SettingsFragment
 import com.example.mytelegram.utilits.replaceFragment
 import com.example.vovatelegram.R
@@ -27,10 +30,30 @@ private const val id_help: Long              = 9
 class AppDrawer(val mainActivity: AppCompatActivity, val toolbar: Toolbar) {
     private lateinit var drawer: Drawer
     private lateinit var header: AccountHeader
+    private lateinit var drawerLayout: DrawerLayout
 
     fun create() {
         createHeader()
         createDrawer()
+        drawerLayout = drawer.drawerLayout
+    }
+
+    fun disableDrawer(){
+        drawer.actionBarDrawerToggle?.isDrawerIndicatorEnabled = false
+        mainActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        drawerLayout.setDrawerLockMode(LOCK_MODE_LOCKED_CLOSED)
+        toolbar.setNavigationOnClickListener(){
+            mainActivity.supportFragmentManager.popBackStack()
+        }
+    }
+
+    fun enableDrawer(){
+        mainActivity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        drawer.actionBarDrawerToggle?.isDrawerIndicatorEnabled = true
+        drawerLayout.setDrawerLockMode(LOCK_MODE_UNLOCKED)
+        toolbar.setNavigationOnClickListener(){
+            drawer.openDrawer()
+        }
     }
 
     private fun createDrawer() {
