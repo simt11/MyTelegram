@@ -1,13 +1,14 @@
 package com.example.vovatelegram
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.vovatelegram.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.mytelegram.activities.RegisterActivity
 import com.example.mytelegram.ui.fragments.ChatsFragment
 import com.example.mytelegram.ui.objects.AppDrawer
+import com.example.mytelegram.utilits.replaceActivity
+import com.example.mytelegram.utilits.replaceFragment
+import com.example.vovatelegram.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -30,14 +31,9 @@ class MainActivity : AppCompatActivity() {
         if (false) {
             setSupportActionBar(toolbar)
             appDrawer.create()
-            supportFragmentManager.beginTransaction()
-                .replace(
-                    R.id.dataContainer,
-                    ChatsFragment()
-                ).commit()
+            replaceFragment(ChatsFragment())
         } else {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            replaceActivity(RegisterActivity())
         }
     }
 
