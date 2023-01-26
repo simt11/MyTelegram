@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "782587735254",
+    "project_id": "mytelegram-8a00d",
+    "storage_bucket": "mytelegram-8a00d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782587735254:android:ca77ab065231988a9ead77",
+        "android_client_info": {
+          "package_name": "com.example.vovatelegram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782587735254-erof6vdh3nb0be7t69trg17eitua1kh5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgEuk1JCbWTRvP8lvCwo7vm0hu0MRZsko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782587735254-erof6vdh3nb0be7t69trg17eitua1kh5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
