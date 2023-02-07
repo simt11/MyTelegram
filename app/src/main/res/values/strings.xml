@@ -33,4 +33,5 @@
     <string name="register_code_hint">------</string>
     <string name="register_toast_enter_phone">Введите номер телефона</string>
     <string name="register_text_enter_phone">Введите номер телефона</string>
+    <string name="verifi_sucess_hello">Добро пожаловать!</string>
 </resources>
