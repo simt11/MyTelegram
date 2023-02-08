@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "782587735254",
+    "firebase_url": "https://mytelegram-8a00d-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "mytelegram-8a00d",
     "storage_bucket": "mytelegram-8a00d.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "782587735254-975nfrfuk4b52pf3bfatt6hacaoh2s92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vovatelegram",
+            "certificate_hash": "eb656647a2538a348ca4fff47dfd9b2bfcc85af8"
+          }
+        },
         {
           "client_id": "782587735254-erof6vdh3nb0be7t69trg17eitua1kh5.apps.googleusercontent.com",
           "client_type": 3
