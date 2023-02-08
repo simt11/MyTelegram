@@ -45,6 +45,11 @@ class EnterPhoneNumberFragment : BaseFragment(R.layout.fragment_enter_phone_numb
             }
         }
         register_btn_next.setOnClickListener() { sendCode() }
+
+    }
+
+    override fun onStop() {
+        super.onStop()
     }
 
     private fun sendCode() {
@@ -76,3 +81,4 @@ PhoneAuthOptions
 .setTimeout(60L, TimeUnit.SECONDS)
 .setCallbacks(callback)
 .build()*/
+

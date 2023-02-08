@@ -16,3 +16,4 @@ fun initFirebase(){
     AUTH = FirebaseAuth.getInstance()
     REF_DATABASE_ROOT = FirebaseDatabase.getInstance().reference
 }
+

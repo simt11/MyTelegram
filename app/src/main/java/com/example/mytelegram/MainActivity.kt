@@ -43,6 +43,5 @@ class MainActivity : AppCompatActivity() {
         toolbar = binding.mainToolbar
         appDrawer = AppDrawer(this, toolbar)
         initFirebase()
-
     }
 }
