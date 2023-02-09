@@ -11,11 +11,10 @@ import com.example.mytelegram.utilits.initFirebase
 import com.example.mytelegram.utilits.replaceActivity
 import com.example.mytelegram.utilits.replaceFragment
 import com.example.vovatelegram.databinding.ActivityMainBinding
-import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var appDrawer: AppDrawer
+    lateinit var appDrawer: AppDrawer
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
