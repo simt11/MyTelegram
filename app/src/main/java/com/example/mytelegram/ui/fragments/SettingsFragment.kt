@@ -6,6 +6,7 @@ import android.view.MenuItem
 import com.example.mytelegram.activities.RegisterActivity
 import com.example.mytelegram.utilits.AUTH
 import com.example.mytelegram.utilits.replaceActivity
+import com.example.mytelegram.utilits.replaceFragment
 import com.example.vovatelegram.MainActivity
 import com.example.vovatelegram.R
 
@@ -28,6 +29,7 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
                 AUTH.signOut()
                 (activity as MainActivity).replaceActivity(RegisterActivity())
             }
+            R.id.settings_TopMenu_change_name -> replaceFragment(ChangeNameFragment())
         }
         return true
     }

@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="settings_button">
+    <style name="settings_buttons">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:background">@drawable/ripple_effect</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="smallText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+        <item name="android:textSize">@dimen/TextH3</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="largeText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/horizontal_margin</item>
+        <item name="android:textSize">@dimen/TextH0</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
     </style>
 
     <style name="settings_button_text">
@@ -57,15 +73,14 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="fragment_text">
+    <style name="editText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/horizontal_margin</item>
-        <item name="android:gravity">center</item>
-        <item name="android:inputType">phone</item>
-        <item name="android:maxLines">1</item>
         <item name="android:textColor">@color/colorTextBlack</item>
-        <item name="android:textSize">@dimen/TextH0</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/TextH1</item>
+        <item name="android:layout_margin">@dimen/horizontal_margin</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColorHint">@color/colorGray</item>
+        <item name="android:inputType">phone</item>
     </style>
 </resources>

@@ -16,7 +16,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 
 private const val ID_CREATE_GROUPS: Long     = 1
 private const val ID_SECRET_CHAT: Long       = 2
-private const val ID_CREATE_CHANEL: Long    = 3
+private const val ID_CREATE_CHANEL: Long     = 3
 private const val ID_CONTACTS: Long          = 4
 private const val ID_PHONE: Long             = 5
 private const val ID_FAVORITES: Long         = 6

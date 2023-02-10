@@ -75,7 +75,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/setting_button_phone"
         app:layout_constraintTop_toBottomOf="@+id/settings_text_account"
-        style="@style/settings_button"
+        style="@style/settings_buttons"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
 
@@ -102,7 +102,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/setting_button_login"
         app:layout_constraintTop_toBottomOf="@+id/setting_button_phone"
-        style="@style/settings_button"
+        style="@style/settings_buttons"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -128,7 +128,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/setting_button_about"
         app:layout_constraintTop_toBottomOf="@+id/setting_button_login"
-        style="@style/settings_button"
+        style="@style/settings_buttons"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-1dp">
 
